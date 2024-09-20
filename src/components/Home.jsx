@@ -1,8 +1,17 @@
+import NavBar from "./NavBar";
 function Home() {
   return (
     <div className="home">
-      <h1>Welcome to My Personal Website!</h1>
-      <p>Hi! I'm Sophia Lim, a Computer Science and Economics student.</p>
+      <NavBar />
+      <div>
+        <h1>Sophia Lim</h1>
+      </div>
+      <div>
+        <p>
+          Hi! I'm a student at Brown University, originally from New Zealand,
+          majoring in Computer Science and Economics. It’s nice to meet you :)
+        </p>
+      </div>
     </div>
   );
 }
