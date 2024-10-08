@@ -1,29 +1,49 @@
 .home {
   height: 100vh;
-  background-image: url('public/homebackground.png'); /* Replace with your image path */
+  background-image: url('/public/homebackground.png'); /* Ensure correct path */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat; /* Ensure it doesn't repeat */
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Align items to the left */
-  /* padding-left: 130px; 
-  padding-right: 130px; */
-  color: white; /* Change text color to white */
-  font-family: 'DM Sans', sans-serif;
-  text-align: left; /* Align text to the left */
+  align-items: flex-start;
+  color: white;
+  padding: 0 60px;
+  text-align: left;
+  z-index: 1; /* Ensure background image is behind content */
+}
+
+.home h1 {
+  font-size: 100px;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .navbar {
   display: flex;
   justify-content: flex-end;
-  margin-right: 60px;
-  width: 95%; /* Ensure it takes full width */
-  position: absolute; /* Position it over the background */
-  top: 0; /* Align to the top */
-  padding-top: 60px; /* Add padding at the top */
-  padding-right: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 60px;
   font-size: 20px;
+  z-index: 100; /* Ensure the navbar stays on top */
+}
+
+/* Transparent navbar for home page */
+.transparent-nav {
+  background-color: transparent; /* Fully transparent */
+  color: white; /* Ensure text is visible on dark backgrounds */
+  transition: background-color 0.3s ease; /* Smooth transition when changing background */
+}
+
+/* White navbar for other pages */
+.white-nav {
+  background-color: white; /* White background for other pages */
+  color: black; /* Ensure text is visible on white background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better separation */
 }
 
 .navbar a {
@@ -33,7 +53,7 @@
 }
 
 .navbar a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Adjust hover color for better visibility */
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust hover color */
 }
 
 .get-in-touch-btn {
@@ -45,25 +65,50 @@
   font-size: 25px; /* Button text size */
   cursor: pointer; /* Pointer cursor on hover */
   margin-top: 20px; /* Add space above the button */
-  margin-left: 130px; /* Add space above the button */
+  margin-left: 10px; /* Add space above the button */
 }
 
 .get-in-touch-btn:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
+.education-page {
+  padding: 100px 60px; /* Reduce padding and keep it consistent */
+  margin-left: 40px; /* Remove margin to prevent unintended spacing */
+  margin-right: 40px;
+}
 
-h1 {
-  font-size: 100px; /* Set h1 font size */
-  margin-bottom: 10px; /* Adjust margin for spacing below the h1 */
-  color: white; /* Change text color to white */
-  padding-left: 130px; 
-  padding-right: 130px;
+.education-page h1{
+  font-size: 80px;
+  text-align: center;
+}
+
+.education-page h2{
+  font-size: 45px;
+}
+
+.education-page h3{
+  font-size: 24px;
+}
+
+.institution {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px; /* Add space between institutions */
+}
+
+.institution-details {
+  max-width: 75%; /* Ensure the content does not take up too much width */
+}
+
+.logo {
+  height: 150px; /* Adjust logo size */
+  margin-left: 20px;
+  margin-top: 60px;
 }
 
 p {
-  font-size: 30px; /* Set p font size */
-  margin: 0; /* Reset margin if needed */
-  padding-left: 130px; 
-  padding-right: 130px;
+  font-size: 30px;
+  margin: 20px 0 20px 0; /* Add margin-bottom to separate paragraphs */
 }
