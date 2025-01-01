@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 import React from "react";
+import sophResume from "/public/Sophia_Lim_Resume_UpdatedDec2024.pdf";
 
 function Contact() {
   return (
@@ -8,7 +9,7 @@ function Contact() {
       <div>
         <h1>Contact Me</h1>
         <div className="contact-buttons">
-          <a href="public/Sophia_Lim_Resume_UpdatedDec2024.pdf" download>
+          <a href={sophResume} download>
             <button className="contact-btn">Download Resume</button>
           </a>
 

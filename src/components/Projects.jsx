@@ -1,4 +1,9 @@
 import NavBar from "./NavBar";
+import printerForm from "/public/Printerformlogo.png";
+import SL from "/public/SL.png";
+import house from "/public/house.png";
+import ASL from "/public/ASL.png";
+import BrownBooks from "/public/BrownBooks.png";
 
 function Projects() {
   return (
@@ -40,7 +45,7 @@ function Projects() {
               </ul>
             </div>
             <div className="project-image">
-              <img src="public/Printerformlogo.png" alt="PrinterForm project" />
+              <img src={printerForm} alt="printerForm Logo" />
             </div>
           </div>
         </div>
@@ -66,7 +71,7 @@ function Projects() {
             </ul>
           </div>
           <div className="project-image">
-            <img src="public/SL.png" alt="Personal project" />
+            <img src={SL} alt="Website image" />
           </div>
         </div>
 
@@ -80,9 +85,9 @@ function Projects() {
             <ul>
               <li>
                 Created a realistic high-altitude scene of the house from
-                Pixar's Up film floating away. Created the model in Blender, usedbump mapping for house details,
-                Bezier curve camera motion, a large skybox, and physics for
-                house swaying in the wind.
+                Pixar's Up film floating away. Created the model in Blender,
+                usedbump mapping for house details, Bezier curve camera motion,
+                a large skybox, and physics for house swaying in the wind.
               </li>
               <li>
                 <strong>Technologies used:</strong> Blender, OpenGL, C++.
@@ -99,7 +104,7 @@ function Projects() {
             </ul>
           </div>
           <div className="project-image">
-            <img src="public/house.png" alt="Graphics project" />
+            <img src={house} alt="graphics project" />
           </div>
         </div>
 
@@ -142,7 +147,7 @@ function Projects() {
             </ul>
           </div>
           <div className="project-image">
-            <img src="public/ASL.png" alt="CV project" />
+            <img src={ASL} alt="ASL image" />
           </div>
         </div>
 
@@ -167,7 +172,7 @@ function Projects() {
             </ul>
           </div>
           <div className="project-image">
-            <img src="public/BrownBooks.png" alt="CV project" />
+            <img src={BrownBooks} alt="BrownBooks Website Image" />
           </div>
         </div>
       </section>
