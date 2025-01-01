@@ -31,6 +31,9 @@ function Projects() {
                   and translating your CAD files into physical objects.
                 </li>
                 <li>
+                  This design research project is led by Professor Ian Gonsher at Brown University.
+                </li>
+                <li>
                   <strong>Technologies used:</strong> React, JavaScript, CSS.
                 </li>
                 <li>
