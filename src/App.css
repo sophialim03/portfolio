@@ -49,6 +49,12 @@
   z-index: 100;
 }
 
+/* Add container for nav links */
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
 .transparent-nav {
   background-color: transparent;
   color: white;
@@ -63,7 +69,39 @@
 .white-nav a {
   padding: 10px 20px;
   text-decoration: none;
-  margin-left: 10px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Mobile navbar styles */
+@media (max-width: 768px) {
+  .transparent-nav,
+  .white-nav {
+    justify-content: flex-start; /* Align to start for better scrolling */
+    padding: 10px 0;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
+  }
+
+  /* Hide scrollbar on Webkit browsers */
+  .transparent-nav::-webkit-scrollbar,
+  .white-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links {
+    display: inline-flex; /* Change to inline-flex for better scrolling */
+    gap: 5px;
+    padding: 0 var(--padding-mobile); /* Add padding to nav-links instead */
+    min-width: min-content; /* Ensure content doesn't wrap */
+  }
+
+  .transparent-nav a,
+  .white-nav a {
+    padding: 8px 16px; /* Slightly smaller padding on mobile */
+    flex-shrink: 0; /* Prevent links from shrinking */
+  }
 }
 
 /* Button styles */
@@ -78,6 +116,22 @@
   cursor: pointer;
   margin-top: 20px;
   transition: background-color 0.3s ease;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 var(--padding-mobile);
+}
+
+.contact-buttons .contact-btn {
+  width: 270px;
+  text-align: center;
 }
 
 /* Contact page styles */
@@ -102,20 +156,6 @@
   margin-bottom: 20px;
 }
 
-.contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
-  width: 100%;
-  max-width: 800px;
-  padding: 0 var(--padding-mobile);
-}
-
-.contact-btn {
-  width: min(250px, 100%);
-}
 
 /* Page content styles */
 .page {
@@ -137,6 +177,7 @@ p {
 .projects-section {
   width: 100%;
   margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .institution,
