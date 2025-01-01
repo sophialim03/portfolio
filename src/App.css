@@ -20,7 +20,10 @@
   color: white;
 }
 
-.navbar {
+/* Transparent navbar for home page */
+.transparent-nav {
+  background-color: transparent; /* Fully transparent */
+  color: white; /* Ensure text is visible on dark backgrounds */
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -32,29 +35,43 @@
   z-index: 100; /* Ensure the navbar stays on top */
 }
 
-/* Transparent navbar for home page */
-.transparent-nav {
-  background-color: transparent; /* Fully transparent */
-  color: white; /* Ensure text is visible on dark backgrounds */
-  transition: background-color 0.3s ease; /* Smooth transition when changing background */
+.transparent-nav a {
+  color: white; /* White text for home page links */
+  padding: 10px 25px;
+  text-decoration: none;
+  margin-left: 20px; /* Add space between links */
+}
+
+.transparent-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust hover color */
 }
 
 /* White navbar for other pages */
 .white-nav {
   background-color: white; /* White background for other pages */
   color: black; /* Ensure text is visible on white background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better separation */
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 60px;
+  font-size: 20px;
+  z-index: 100; /* Ensure the navbar stays on top */
 }
 
-.navbar a {
-  color: black;
+.white-nav a {
+  color: black; /* Black text for other pages */
   padding: 10px 25px;
   text-decoration: none;
+  margin-left: 20px; /* Add space between links */
 }
 
-.navbar a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Adjust hover color */
+.white-nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Adjust hover color */
 }
+
 
 .get-in-touch-btn {
   background-color: #7087FF; /* Button background color */
@@ -72,43 +89,279 @@
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-.education-page {
-  padding: 100px 60px; /* Reduce padding and keep it consistent */
-  margin-left: 40px; /* Remove margin to prevent unintended spacing */
-  margin-right: 40px;
-}
+/* Contact Page Styles */
 
-.education-page h1{
-  font-size: 80px;
-  text-align: center;
-}
-
-.education-page h2{
-  font-size: 45px;
-}
-
-.education-page h3{
-  font-size: 24px;
-}
-
-.institution {
+.contact {
+  height: 100vh;
+  background-image: url('/public/homebackground.png'); /* Ensure correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Ensure it doesn't repeat */
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 40px; /* Add space between institutions */
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  color: white;
+  padding: 0 60px;
+  z-index: 1; /* Ensure background image is behind content */
+  text-align: center; /* Center text inside */
 }
 
-.institution-details {
-  max-width: 75%; /* Ensure the content does not take up too much width */
+.contact h1 {
+  font-size: 100px;
+  margin-bottom: 20px;
+  color: white;
 }
 
-.logo {
-  height: 150px; /* Adjust logo size */
-  margin-left: 20px;
-  margin-top: 60px;
+.contact-buttons {
+  display: flex;
+  justify-content: center;  /* Center buttons horizontally */
+  gap: 20px;                /* Add space between buttons */
+  margin-top: 40px;         /* Space above buttons */
+  width: 100%;              /* Ensure the container stretches across */
+  max-width: 800px;         /* Limit the width of the buttons container */
+}
+
+.contact-btn {
+  background-color: #7087FF; /* Button background color */
+  color: white; /* Button text color */
+  padding: 28px 28px; /* Adjust padding */
+  border: none; /* Remove default border */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 20px; /* Button text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: 250px; /* Fixed width for consistency */
+}
+
+.contact-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+
+
+.page {
+  padding: 100px 60px; /* Reduce padding and keep it consistent */
+  margin-left: 80px; /* Remove margin to prevent unintended spacing */
+  margin-right: 80px;
 }
 
 p {
   font-size: 30px;
   margin: 20px 0 20px 0; /* Add margin-bottom to separate paragraphs */
 }
+
+/* Education section styles */
+.education-section {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.institution {
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  border-top: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.institution-details {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.institution-details h2 {
+  font-size: 45px;
+  margin-bottom: 0.8rem;
+}
+
+.institution-details h4 {
+  font-size: 20px;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+.institution-details h3 {
+  font-size: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.institution-details ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.institution-details li {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.logo {
+  height: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.education-section h1 {
+  font-size: 80px;
+  margin-bottom: 3rem;
+}
+
+.page {
+  padding: 100px 60px;
+  margin-left: 80px;
+  margin-right: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.institution-details li strong {
+  font-weight: 600;
+}
+
+/* Experience Section Styles */
+.work-experience-section,
+.leadership-experience-section {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.experience-item {
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  border-top: 2px solid #eee;
+}
+
+.experience-header {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.experience-header h2 {
+  font-size: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h4 {
+  font-size: 20px;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.experience-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.experience-content ul {
+  list-style: disc; 
+  padding-left: 1.5rem;
+  margin: 0;
+  flex: 1;
+}
+
+.experience-content ul ul {
+  margin-left: 1.5rem;
+  margin-top: 0.25rem; 
+}
+
+.experience-content li {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  line-height: 1.3; 
+}
+
+.work-experience-section h1,
+.leadership-experience-section h1 {
+  font-size: 80px;
+  margin-bottom: 3rem;
+}
+
+.page {
+  padding: 100px 60px;
+  margin-left: 80px;
+  margin-right: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Projects Section Styles */
+.projects-section {
+  width: 100%;
+}
+
+.projects-section h1 {
+  font-size: 80px;
+  margin-bottom: 3rem;
+}
+
+.project {
+  margin-bottom: 4rem;
+  padding: 1rem 0;
+  border-top: 2px solid #eee; 
+}
+
+.project-header {
+  width: 100%;
+  margin-bottom: 2rem; 
+}
+
+.project-header h2 {
+  font-size: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.project-header h4 {
+  font-size: 20px;
+  color: #666;
+  margin-top: 0;
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.project-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.project-content li {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.project-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+

@@ -1,8 +1,29 @@
+import NavBar from "./NavBar";
+import React from "react";
+
 function Contact() {
   return (
     <div className="contact">
-      <h2>Contact</h2>
-      <p>You can reach me at: [your email]</p>
+      <NavBar />
+      <div>
+        <h1>Contact Me</h1>
+        <div className="contact-buttons">
+          <a href="public/Sophia_Lim_Resume_UpdatedDec2024.pdf" download>
+            <button className="contact-btn">Download Resume</button>
+          </a>
+
+          <a href="mailto:sophialimnz@gmail.com">
+            <button className="contact-btn">Email Me</button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sophia-lim-a310841a0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="contact-btn">LinkedIn</button>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import macLogo from "/public/Macleans_College_logo.png";
 
 function Education() {
   return (
-    <div className="education-page">
+    <div className="page">
       <NavBar />
       <section className="education-section">
         <h1 style={{ color: "#DEC2FD" }}>Education</h1>
@@ -17,7 +17,7 @@ function Education() {
             <h4>Providence, RI, United States</h4>
             <h4>2022 - 2026</h4>
 
-            <h3>Course Work:</h3>
+            <h3>Course Work</h3>
             <ul>
               <li>
                 <strong>Computer Science:</strong> Program Design with Data
@@ -36,10 +36,10 @@ function Education() {
               </li>
             </ul>
 
-            <h3>Activities and Societies:</h3>
+            <h3>Activities and Societies</h3>
             <ul>
               <li>
-                Class Coordinating Board ’26 Vice President (Student Government)
+                Class Coordinating Board '26 Vice President (Student Government)
               </li>
               <li>Women in Science and Engineering Mentor</li>
               <li>Brown Entrepreneurship Program – StartUp @ Brown</li>
@@ -57,7 +57,7 @@ function Education() {
             <h4>Auckland, New Zealand</h4>
             <h4>2017 - 2021</h4>
 
-            <h3>Course Work:</h3>
+            <h3>Course Work</h3>
             <ul>
               <li>
                 CAIE A Level Physics (A*), CAIE A Level Mathematics (A*), CAIE A
@@ -67,7 +67,7 @@ function Education() {
               </li>
             </ul>
 
-            <h3>Activities and Societies:</h3>
+            <h3>Activities and Societies</h3>
             <ul>
               <li>Student Representative on Board of Trustees</li>
               <li>School Prefect</li>
@@ -75,14 +75,16 @@ function Education() {
               <li>Duke of Edinburgh Gold</li>
               <li>Peer Support Mentor</li>
               <li>Tiger Global Case Competition (1st in Oceania)</li>
-              <li>National Secondary Schools Business Case Comp (#2/80);</li>
+              <li>
+                National Secondary Schools Business Case Competition (#2/80)
+              </li>
               <li>Cheerleading Captain and Coach</li>
               <li>Aerobics Coach</li>
               <li>Academic Tutor</li>
-              <li>Art club leader</li>
+              <li>Art Club Leader</li>
             </ul>
           </div>
-          <img src={macLogo} alt="Brown University Logo" className="logo" />
+          <img src={macLogo} alt="Macleans College Logo" className="logo" />
         </div>
       </section>
     </div>
