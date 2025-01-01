@@ -49,7 +49,7 @@ function Projects() {
         <div className="project">
           <div className="project-header">
             <h2>Portfolio Website</h2>
-            <h4>2024 - Present</h4>
+            <h4>Ongoing</h4>
           </div>
           <div className="project-content">
             <ul>
